@@ -1,45 +1,25 @@
-# Casino
+# Software Quality - code testing
 
-**An example of a Casino supervision tree in Elixir**
+Installation
 
-## Installation
+Make sure you have Elixir installed in your computer
+http://elixir-lang.github.io/install.html
 
-Clone the repository:
+Clone the repository
 ```
-git@github.com:philipbrown/casino.git && cd casino
-```
-
-Fire up <code>iex</code>:
-```
-iex -S mix
+git clone https://github.com/vellov/SQTests.git && cd SQTests
 ```
 
-## Usage
-```elixir
-# Add a new player
-Casino.add_player("Philip", 100)
-
-# Add another player
-Casino.add_player("Jane", 250)
-
-# List all of the players
-Casino.list_players
-
-# Remove a player
-Casino.remove_player(2)
-
-# Count the active blackjack tables
-Casino.count_blackjack_tables
-
-# Add 3 more blackjack tables
-Casino.add_blackjack_table(3)
-
-# Count the blackjack tables again
-Casino.count_blackjack_tables
-
-# Remove a blackjack table
-Casino.remove_blackjack_table
-
-# Count the blackjack tables one last time
-Casino.count_blackjack_tables
+Install dependencies
 ```
+mix deps.get
+```
+
+Run tests using cover 
+```
+mix test --cover
+```
+
+Summary of results is displayed in the terminal, htmls with highlited colors and tested code lines are in folder named cover.
+
+# Initial code is taken from http://culttt.com/2016/09/21/building-casino-elixir/ and edited by us to fit our needs.
