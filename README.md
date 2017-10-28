@@ -22,4 +22,9 @@ mix test --cover
 
 Summary of results is displayed in the terminal, htmls with highlited colors and tested code lines are in folder named cover.
 
-### Initial code is taken from http://culttt.com/2016/09/21/building-casino-elixir/ and edited by us to fit our needs.
+### Initial code 
+Taken from http://culttt.com/2016/09/21/building-casino-elixir/.
+
+Initial code had 0 tests.
+
+We edited the code to fit our needs and added tests.
