@@ -30,7 +30,8 @@ defmodule Casino.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:coverex, "~> 1.4.10"}
+      {:coverex, "~> 1.4.10"},
+      {:mock, "~> 0.2.1"}
     ]
   end
 end

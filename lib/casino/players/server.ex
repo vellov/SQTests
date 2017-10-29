@@ -51,11 +51,13 @@ defmodule Casino.Players.Server do
   end
 
   def handle_cast({:remove, id}, {players, refs}) do
-    {{_name, pid, _ref}, players} = Map.pop(players, id)
-
-    Process.exit(pid, :kill)
-
-    {:noreply, {players, refs}}
+    res = Map.pop(players, id)
+    case res do
+      {{_name, pid, _ref}, players} -> 
+        Process.exit(pid, :kill)
+        {:noreply, {players, refs}}
+      _ -> {:noreply, {players, refs}}
+    end
   end
 
   def handle_cast({:remove_all},  {players, _refs}) do
